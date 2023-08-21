@@ -30,18 +30,18 @@ function handleClickCard(target) {
   const makePurchaseBtn = document.getElementById('makePurchaseBtn')
   if(total > 0 ){
     makePurchaseBtn.removeAttribute('disabled');
-    makePurchaseBtn.style.backgroundColor = '#E527B2'
+    // makePurchaseBtn.style.backgroundColor = '#E527B2'
   }
   else{
-    makePurchaseBtn.setAttribute('disabled','disabled');
+    makePurchaseBtn.setAttribute('disabled',true);
 
   }
 const applyBtn = document.getElementById('applyBtn')
 if(total >= 200){
     applyBtn.removeAttribute('disabled');
-    applyBtn.style.backgroundColor = '#E527B2'
+    // applyBtn.style.backgroundColor = '#E527B2'
 }else{
-    applyBtn.setAttribute('disabled','disabled');
+    applyBtn.setAttribute('disabled',true);
 }
 
 
@@ -50,6 +50,7 @@ if(total >= 200){
 
 document.getElementById('applyBtn').addEventListener('click',function(){
     const setValue = document.getElementById("couponInput").innerText;
+    console.log('object');
     const discountNumber = document.getElementById('discountNumber');
     const firstPrice = document.getElementById('first-total');
     // console.log(firstPrice);
@@ -83,5 +84,12 @@ document.getElementById('applyBtn').addEventListener('click',function(){
 
 
 document.getElementById('reloadPage').addEventListener('click',function(){
-    location.reload()
+    // location.reload()
+    document.getElementById('first-total').innerText = 0
+    document.getElementById('discountNumber').innerText = 0
+    document.getElementById('grandTotal').innerText = 0
+    document.getElementById("selectedItems").innerHTML = "";
+    document.getElementById("applyBtn").setAttribute('disabled' , true)
+    document.getElementById("makePurchaseBtn").setAttribute('disabled' , true)
+
 })

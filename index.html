@@ -173,8 +173,8 @@
                     <h3 class="text-lg flex justify-center lg:justify-normal lg:ml-5 font-bold">Have coupon?</h3>
                     <input id="couponInput" class="border mt-2 ml-5 border-[#11111126] rounded-l
                      p-2 " type="text" name=""  placeholder="Coupon code">
-                    <button disabled id="applyBtn" style="background-color: rgba(0, 0,0, 0.4);"
-                        class="text-white  p-2.5 ml-[-5px] rounded-r bg-[#E527B2] ">
+                    <button disabled id="applyBtn" 
+                        class="text-white disabled:bg-black  p-2.5 ml-[-5px] rounded-r bg-[#E527B2] ">
                         Apply
                     </button>
                 </div>
@@ -210,8 +210,8 @@
                                 </span>
                             </h3> 
                             <hr>
-                             <button  id="makePurchaseBtn" style="background-color: rgba(0, 0,0, 0.4);"
-                                class="text-white  px-9 mt-2 py-2.5 ml-[-5px] rounded-lg bg-[#E527B2]"
+                             <button  id="makePurchaseBtn" 
+                                class="text-white  px-9 mt-2 py-2.5 ml-[-5px] rounded-lg enabled:bg-[#E527B2] disabled:bg-black"
                                 onclick="makePurchase.showModal()" disabled>Make
                                 Purchase</button> 
                             <div class="card-actions justify-center">
@@ -225,7 +225,7 @@
 
                                         <div class="modal-action justify-center">
                                            
-                                            <button id="reloadPage" onclick="reloadPage(this)"
+                                            <button id="reloadPage" 
                                                 class="text-white font-semibold p-2.5 px-6  rounded-lg bg-[#E527B2]">Go
                                                 Home</button>
                                                 
